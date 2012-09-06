@@ -1,0 +1,21 @@
+# = wall
+O = visited
+? = unknown
+
+ #
+OCO
+ #
+
+ #
+OC#
+ #
+
+ #
+OC#
+ O
+
+    3
+  3 2 3
+3 2 O 1 2 3
+  3 2 3
+    3

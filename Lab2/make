@@ -1,0 +1,5 @@
+#!/bin/sh
+javac -classpath  ./lib/aima-core.jar ./src/tddc17/MyVacuumAgent.java
+javac -classpath  ./lib/aima-core.jar ./src/tddc17/ReactiveVacuumAgent.java
+javac -classpath  ./lib/aima-core.jar ./src/tddc17/RandomVacuumAgent.java
+mv ./src/tddc17/*.class ./bin/tddc17/
