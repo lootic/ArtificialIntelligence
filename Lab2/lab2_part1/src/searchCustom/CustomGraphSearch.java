@@ -43,12 +43,10 @@ public class CustomGraphSearch implements SearchObject {
 		path = new ArrayList<SearchNode>();
 		
 		// Implement this!
-		//get current node
+
 		while(true) {
 			currentNode = frontier.peekAtFront();
-//			System.out.println(currentNode.getState().toString());
 			if (p.isGoalState(currentNode.getState())) {
-//				System.out.println("returns");
 				break;
 			}
 			frontier.removeFirst();
@@ -64,11 +62,8 @@ public class CustomGraphSearch implements SearchObject {
 			}
 		}
 		path = currentNode.getPathFromRoot();
-//		System.out.println("returns path");
-//		for(SearchNode node : path) {
-//			System.out.print(node.getState().toString() + ",");
-//		}
 		return path;
+
 		/* Some hints:
 		 * -Read early part of chapter 3 in the book!
 		 * -You are free to change anything how you wish as long as the program runs, but some structure is given to help you.
