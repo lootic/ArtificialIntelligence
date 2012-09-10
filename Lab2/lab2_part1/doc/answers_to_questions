@@ -35,11 +35,10 @@ admissible heuristic?
 identify a good heuristic function). Draw the search tree for them, and explain 
 how they proceed in the searching. Also include the memory usage. You can attach 
 a hand-made drawing.
-	
+	Check search_algorithm.jpg.  
 
 6. Look at all the offline search algorithms presented in chapter 3 plus A* 
 search. Are they complete? Are they optimal? Explain why!
-	
 
 7. Assume that you had to go back and do lab 1 once more, but this time with 
 obstacles. Remember that the agent did not have perfect knowledge of the 
@@ -51,4 +50,4 @@ search for? Give an example.
 	visits all squares in a certain area. The best would be to combine these 
 	in some way, so that we find a path to the square with the cheapest covering
 	route. This means we should have a greedy kind of breadth-first search that
-	when we 
+	when we
