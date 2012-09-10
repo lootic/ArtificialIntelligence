@@ -1,14 +1,29 @@
 1. In the vacuum cleaner domain in part 1, what were the states and actions? 
 What is the branching factor?
+	The different states are the squares the vacuum agent could be standing at.
+	Actions involved moving in all directions and sucking just a bit different 
+	from lab1. With other words, turning doesnt cost anything. 
+	To find the childs of each node we try to go west, north, east and south
+	from each position.
 
 2. What is the difference between Breadth First Search and Uniform Cost Search 
 in a domain where the cost of each action is 1?
+	The only difference is one condition, "if the node already is added for 
+	being searched and we recently found a node with lower cost to it, replace
+	the old node". When executing this code there will be no actual difference
+	other than execution time as breadth-first already finds shortest paths to
+	everything around it.
 
 3. Suppose that h1 and h2 are admissible heuristics (used in for example A*). 
 Which of the following are also admissible?
 a) (h1+h2)/2
+	Yup, since we will end up between two admissible values, the value we get
+	must still be admissible.
 b) 2h1
+	Nope, if h1 finds the optimal cost, then 2h1 clearly overestimates the cost.
 c) max (h1,h2)
+	Yup, h1 and h2 both doesnt overestimate the path, with other words, taking 
+	the bigger of them just makes the result the closest to the actual value.
 
 4. If one would use A* to search for a path to one specific square in the vacuum 
 domain, what could the heuristic (h) be? The cost function (g)? Is it an 
@@ -19,6 +34,7 @@ admissible heuristic?
 identify a good heuristic function). Draw the search tree for them, and explain 
 how they proceed in the searching. Also include the memory usage. You can attach 
 a hand-made drawing.
+Dijkstras.
 
 6. Look at all the offline search algorithms presented in chapter 3 plus A* 
 search. Are they complete? Are they optimal? Explain why!
@@ -28,3 +44,5 @@ obstacles. Remember that the agent did not have perfect knowledge of the
 environment but had to explore it incrementally. Could you still use the search 
 algorithms you have learned to guide the agent's execution? What would you 
 search for? Give an example.
+	Yes I could use search algorithms to find the cheapest road to a non-observed
+	square.
