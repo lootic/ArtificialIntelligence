@@ -28,21 +28,27 @@ c) max (h1,h2)
 4. If one would use A* to search for a path to one specific square in the vacuum 
 domain, what could the heuristic (h) be? The cost function (g)? Is it an 
 admissible heuristic?
+	Yes.
 
 5. Draw and explain. Choose your three favorite search algorithms and apply them
  to any problem domain (it might be a good idea to use a domain where you can 
 identify a good heuristic function). Draw the search tree for them, and explain 
 how they proceed in the searching. Also include the memory usage. You can attach 
 a hand-made drawing.
-Dijkstras.
+	
 
 6. Look at all the offline search algorithms presented in chapter 3 plus A* 
 search. Are they complete? Are they optimal? Explain why!
+	
 
 7. Assume that you had to go back and do lab 1 once more, but this time with 
 obstacles. Remember that the agent did not have perfect knowledge of the 
 environment but had to explore it incrementally. Could you still use the search 
 algorithms you have learned to guide the agent's execution? What would you 
 search for? Give an example.
-	Yes I could use search algorithms to find the cheapest road to a non-observed
-	square.
+	Yes we could use search algorithms to find the cheapest road to a non-observed
+	square. We can also use search algorithms to find the cheapest route that 
+	visits all squares in a certain area. The best would be to combine these 
+	in some way, so that we find a path to the square with the cheapest covering
+	route. This means we should have a greedy kind of breadth-first search that
+	when we 
