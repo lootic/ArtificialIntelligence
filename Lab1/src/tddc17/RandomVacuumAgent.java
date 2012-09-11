@@ -1,5 +1,3 @@
-package tddc17;
-
 
 import aima.core.environment.liuvacuum.*;
 import aima.core.agent.Action;

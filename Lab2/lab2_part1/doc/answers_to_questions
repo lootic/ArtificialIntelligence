@@ -35,7 +35,19 @@ admissible heuristic?
 identify a good heuristic function). Draw the search tree for them, and explain 
 how they proceed in the searching. Also include the memory usage. You can attach 
 a hand-made drawing.
-	Check search_algorithm.jpg.  
+	Check search_algorithm.jpg (and hopefully you can read it, otherwise send a 
+	mail and we will try to make it better). 
+
+	Depth-first can use the least 
+	memory as we can save the iterations in the loop-structure, with other words
+	we only need to remember what way we have taken so far. With breadth first
+	we need to have all the leaves in the last iteration, meaning we need to
+	save the nodes in an external structure. If the leaves are at different 
+	levels it will use less memory than if all leaves are the the lowest level 
+	of the tree. Dijkstras which is a special case of A* is a lot different. 
+	Here we need one slot for each node to remember which was the cheapest route
+	to that node. This also makes it easy for us and say that Dijkstras use O(N)
+	memory.
 
 6. Look at all the offline search algorithms presented in chapter 3 plus A* 
 search. Are they complete? Are they optimal? Explain why!
