@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+"
+  codebase="http://www.aispace.org/"
+>
+<information>
+  <title>Belief and Decision Networks</title>
+  <vendor>AIspace</vendor>
+  <homepage href="www.aispace.org" />
+</information>
+<offline-allowed/>
+<security>
+  <all-permissions/>
+</security>
+<resources>
+  <j2se version="1.5+" />
+  <jar href="bayes/bayes.jar"/>
+</resources>
+<application-desc />
+</jnlp>
+
