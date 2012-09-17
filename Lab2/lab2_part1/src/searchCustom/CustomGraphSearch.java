@@ -43,7 +43,7 @@ public class CustomGraphSearch implements SearchObject {
 		path = new ArrayList<SearchNode>();
 		
 		// Implement this!
-
+x
 		while(true) {
 			currentNode = frontier.peekAtFront();
 			if (p.isGoalState(currentNode.getState())) {
