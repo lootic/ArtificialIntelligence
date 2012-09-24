@@ -1,0 +1,68 @@
+assumptions:
+	det finns alltid en och endast en ljusknapp i ett rum
+
+perception:
+	rum
+		dörrar
+		ljusknapp
+		lådor
+		föremål
+
+	dörr
+		rum
+		rum
+		is_wide
+
+	ljusknapp
+		på/av
+
+	låda
+
+	föremål
+		identifier
+
+	shakey
+		rum
+		föremål
+
+handlingar:
+	gå genom en dörr
+	begränsningar:
+		none
+	effekt:
+		shakey.setRoom(dörr.getRoom(shakey.getRoom()))
+
+	flytta på en låda mellan rum
+	begränsningar:
+		ska vara vid dörr
+		lådan ska finnas i rummet
+	effekt:
+		dörr.getRoom(shakey.getRoom()).addBox(shakey.getRoom().pollBox(id))		
+
+	slå på och av ljus
+	begränsningar
+		låda i samma rum
+	effekt:
+		shakey.getRoom().lightSwitch()
+
+	lyfta ett föremål
+	begränsningar:
+		föremål finns i rummet
+		ljus på
+		# föremål < 2
+	effekt:
+		shakey.addObject(shakey.getRoom().pollObject(id))
+		
+	släppa ett föremål
+	begränsningar:
+		# föremål > 0
+	effekt:
+		shakey.getRoom().addObject(shakey.pollObject(id))
+
+input:
+	rum (föremål, lådor)
+	dörr (rum, rum)
+	föremål (id)
+	låda (id)
+	shakey (rum)
+	
