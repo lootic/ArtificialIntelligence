@@ -5,7 +5,8 @@
 					(DOOR ?room1 ?room2)
 					(in-room ?room))
 
-	(:action move (?from ?to)
+	(:action move 
+		:parameters (?from ?to)
 		:precondition (DOOR ?from ?to)
 		:effect (and (in-room ?to) (not (in-room ?from))))
 )
