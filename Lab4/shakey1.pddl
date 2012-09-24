@@ -1,6 +1,4 @@
 (define (problem shakey1)
-	(:domain shakey)
-
 	(:init 
 		(ROOM room1) 
 		(ROOM room2)
