@@ -1,0 +1,64 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ACTION_MOVE_FORWARD	MyVacuumAgent.java	/^	final int ACTION_MOVE_FORWARD 	= 1;$/;"	f	class:MyAgentState
+ACTION_NONE	MyVacuumAgent.java	/^	final int ACTION_NONE 		= 0;$/;"	f	class:MyAgentState
+ACTION_SUCK	MyVacuumAgent.java	/^	final int ACTION_SUCK	 		= 4;$/;"	f	class:MyAgentState
+ACTION_TURN_LEFT	MyVacuumAgent.java	/^	final int ACTION_TURN_LEFT 		= 3;$/;"	f	class:MyAgentState
+ACTION_TURN_RIGHT	MyVacuumAgent.java	/^	final int ACTION_TURN_RIGHT 	= 2;$/;"	f	class:MyAgentState
+CLEAR	MyVacuumAgent.java	/^	final int CLEAR 	= 2;$/;"	f	class:MyAgentState
+DIRT	MyVacuumAgent.java	/^	final int DIRT		= 3;$/;"	f	class:MyAgentState
+EAST	MyVacuumAgent.java	/^	public final short EAST = 2;$/;"	f	class:MyAgentProgram
+MyAgentProgram	MyVacuumAgent.java	/^class MyAgentProgram implements AgentProgram {$/;"	c
+MyAgentState	MyVacuumAgent.java	/^	MyAgentState()$/;"	m	class:MyAgentState
+MyAgentState	MyVacuumAgent.java	/^class MyAgentState$/;"	c
+MyVacuumAgent	MyVacuumAgent.java	/^    public MyVacuumAgent() {$/;"	m	class:MyVacuumAgent
+MyVacuumAgent	MyVacuumAgent.java	/^public class MyVacuumAgent extends AbstractAgent {$/;"	c
+NORTH	MyVacuumAgent.java	/^	public final short NORTH = 1;$/;"	f	class:MyAgentProgram
+SOUTH	MyVacuumAgent.java	/^	public final short SOUTH = 3;$/;"	f	class:MyAgentProgram
+UNKNOWN	MyVacuumAgent.java	/^	final int UNKNOWN 	= 0;$/;"	f	class:MyAgentState
+WALL	MyVacuumAgent.java	/^	final int WALL 		= 1;$/;"	f	class:MyAgentState
+WEST	MyVacuumAgent.java	/^	public final short WEST = 0;$/;"	f	class:MyAgentProgram
+actionQueue	MyVacuumAgent.java	/^	public LinkedBlockingQueue<Action> actionQueue = $/;"	f	class:MyAgentProgram
+agent_last_action	MyVacuumAgent.java	/^	public int agent_last_action = ACTION_NONE;$/;"	f	class:MyAgentState
+agent_x_position	MyVacuumAgent.java	/^	public int agent_x_position = 1;$/;"	f	class:MyAgentState
+agent_y_position	MyVacuumAgent.java	/^	public int agent_y_position = 1;$/;"	f	class:MyAgentState
+beenVisited	MyVacuumAgent.java	/^	boolean beenVisited(int x, int y) {$/;"	m	class:MyAgentProgram
+bump	MyVacuumAgent.java	/^	boolean bump;$/;"	f	class:MyAgentProgram
+circleAlgorithm	MyVacuumAgent.java	/^	void circleAlgorithm() {$/;"	m	class:MyAgentProgram
+clear	MyVacuumAgent.java	/^	void clear() {		$/;"	m	class:MyAgentProgram
+currentX	MyVacuumAgent.java	/^	int currentX() {$/;"	m	class:MyAgentProgram
+currentY	MyVacuumAgent.java	/^	int currentY() {$/;"	m	class:MyAgentProgram
+dirt	MyVacuumAgent.java	/^	boolean dirt;$/;"	f	class:MyAgentProgram
+execute	MyVacuumAgent.java	/^	public Action execute(Percept percept) {$/;"	m	class:MyAgentProgram
+findPathTo	MyVacuumAgent.java	/^	void findPathTo(int x, int y) {$/;"	m	class:MyAgentProgram
+goEast	MyVacuumAgent.java	/^	void goEast() {$/;"	m	class:MyAgentProgram
+goForward	MyVacuumAgent.java	/^	void goForward() {$/;"	m	class:MyAgentProgram
+goNorth	MyVacuumAgent.java	/^	void goNorth() {$/;"	m	class:MyAgentProgram
+goSouth	MyVacuumAgent.java	/^	void goSouth() {$/;"	m	class:MyAgentProgram
+goWest	MyVacuumAgent.java	/^	void goWest() {$/;"	m	class:MyAgentProgram
+greedyAlgorithm	MyVacuumAgent.java	/^	void greedyAlgorithm() {$/;"	m	class:MyAgentProgram
+home	MyVacuumAgent.java	/^	boolean home;$/;"	f	class:MyAgentProgram
+homeX	MyVacuumAgent.java	/^	int homeX;$/;"	f	class:MyAgentProgram
+homeY	MyVacuumAgent.java	/^	int homeY;$/;"	f	class:MyAgentProgram
+initialized	MyVacuumAgent.java	/^	public int initialized = 0;$/;"	f	class:MyAgentState
+isBumping	MyVacuumAgent.java	/^	boolean isBumping() {$/;"	m	class:MyAgentProgram
+iterationCounter	MyVacuumAgent.java	/^	public int iterationCounter = 200;$/;"	f	class:MyAgentProgram
+makeDecision	MyVacuumAgent.java	/^	void makeDecision() {$/;"	m	class:MyAgentProgram
+nextX	MyVacuumAgent.java	/^	int nextX() {$/;"	m	class:MyAgentProgram
+nextY	MyVacuumAgent.java	/^	int nextY() {$/;"	m	class:MyAgentProgram
+printWorldDebug	MyVacuumAgent.java	/^	public void printWorldDebug()$/;"	m	class:MyAgentState
+state	MyVacuumAgent.java	/^	public MyAgentState state = new MyAgentState();$/;"	f	class:MyAgentProgram
+stop	MyVacuumAgent.java	/^	void stop() {		$/;"	m	class:MyAgentProgram
+surroundedByVisited	MyVacuumAgent.java	/^	boolean surroundedByVisited(int x, int y) {$/;"	m	class:MyAgentProgram
+tddc17	MyVacuumAgent.java	/^package tddc17;$/;"	p
+turnLeft	MyVacuumAgent.java	/^	void turnLeft() {$/;"	m	class:MyAgentProgram
+turnRight	MyVacuumAgent.java	/^	void turnRight() {$/;"	m	class:MyAgentProgram
+turningDirection	MyVacuumAgent.java	/^	private short turningDirection = 2;$/;"	f	class:MyAgentProgram	file:
+updateWorld	MyVacuumAgent.java	/^	public void updateWorld(int x_position, int y_position, int info)$/;"	m	class:MyAgentState
+virtualX	MyVacuumAgent.java	/^	int virtualX; \/\/statevar that will be used for pathFinding$/;"	f	class:MyAgentProgram
+virtualY	MyVacuumAgent.java	/^	int virtualY; \/\/statevar that will be used for pathFinding$/;"	f	class:MyAgentProgram
+world	MyVacuumAgent.java	/^	public int[][] world = new int[20][20];$/;"	f	class:MyAgentState

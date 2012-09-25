@@ -1,5 +1,6 @@
 assumptions:
 	det finns alltid en och endast en ljusknapp i ett rum
+	shakey can knuffa en låda genom en dörr utan att själv följa med efters
 
 perception:
 	rum
