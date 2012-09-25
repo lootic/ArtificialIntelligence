@@ -4,17 +4,15 @@
 	(:predicates	(ROOM ?room)
 					(DOOR ?room1 ?room2)
 					(WIDE-DOOR ?room1 ?room2)
+					(GRIP ?grip)
 					(BOX ?box)
 					(ITEM ?item)
-					(GRIP ?gripper)
 					(in-room ?room)
 					(box-location ?room ?box)
 					(is-lit ?room)
-					(left-gripper ?grip)
-					(right-gripper ?grip)
-					(left-item ?item)
-					(right-item ?item)
-					(item-location ?item ?room))
+					(gripped-item ?item ?grip)
+					(item-location ?item ?room)
+					(gripped ?grip))
 
 	(:action move 
 		:parameters (?from ?to)
@@ -39,25 +37,16 @@
 		:precondition (and (in-room ?room)(box-location ?room ?box))
 		:effect (not (is-lit ?room)))
 
-	(:action grip-left
-		:parameters (?item ?room)
-		:precondition (and 	(item-location ?item ?room) (is-lit ?room) 
-							(in-room ?room)(not (left-gripper ?grip)))
-		:effect (and (left-gripper ?item) (not (item-location ?item ?room))))
+	(:action grip
+		:parameters (?room ?item ?grip)
+		:precondition 	(and (not (used ?grip)) (in-room ?room) (is-lit ?room) 
+						(item-location ?item ?room))
+		:effect (and (used ?grip) (gripped-item ?item ?grip) 
+				(not (item-location ?item ?room))))
 	
-	(:action grip-left
-		:parameters (?item ?room)
-		:precondition (and 	(left-gripper ?item) (in-room ?room))
-		:effect (and (not(left-gripper ?item)) (item-location ?item ?room)))
-
-	(:action grip-right
-		:parameters (?item ?room)
-		:precondition (and 	(item-location ?item ?room) (is-lit ?room) 
-							(in-room ?room)(not (right-gripper ?item)))
-		:effect (and (right-gripper ?item) (not (item-location ?item ?room))))
-	
-	(:action grip-right
-		:parameters (?item ?room)
-		:precondition (and 	(right-gripper ?item) (in-room ?room))
-		:effect (and (not(right-gripper ?item)) (item-location ?item ?room)))
+	(:action drop
+		:parameters (?room ?item ?grip)
+		:precondition (and (in-room ?room) (gripped-item ?grip ?item))
+		:effect (and (not (used ?grip)) (not(gripped-item ?grip ?item)) 
+				(item-location ?item ?room)))
 ) 

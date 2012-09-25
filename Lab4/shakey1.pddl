@@ -8,12 +8,16 @@
 		item1
 		item2		
 		item3
+		grip-left
+		grip-right
 	)
 
-	(:init 
+	(:init
 		(ITEM item1)
 		(ITEM item2)
 		(ITEM item3)
+		(GRIP grip-left)
+		(GRIP grip-right)
 		(ROOM room1) 
 		(ROOM room2)		
 		(ROOM room3)
