@@ -1,0 +1,10 @@
+Scalable parameters:
+	- Grippers
+	- Rooms
+	- Doors
+	- Wide doors
+	- Items
+	- Boxes
+	- If you set or in the goal-condition, the number of goal states will 
+	  expand.
+

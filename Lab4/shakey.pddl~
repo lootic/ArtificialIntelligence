@@ -48,4 +48,4 @@
 		:precondition (and (in-room ?room) (gripped-item ?item ?grip))
 		:effect (and (not (used ?grip)) (not(gripped-item ?item ?grip)) 
 				(item-location ?item ?room)))
-)
+) 

@@ -1,0 +1,31 @@
+
+		roomxyzxyzwv1
+		roomxyzxyzwv2
+		roomxyzxyzwv3
+		boxxyzxyzwv1
+		itemxyzxyzwv1
+		itemxyzxyzwv2		
+		itemxyzxyzwv3
+
+		(item itemxyzxyzwv1)
+		(item itemxyzxyzwv2)
+		(item itemxyzxyzwv3)
+		(GRIP grip-left)
+		(GRIP grip-right)
+		(room roomxyzxyzwv1) 
+		(room roomxyzxyzwv2)		
+		(room roomxyzxyzwv3)
+		(DOOR roomxyzxyzwv1 roomxyzxyzwv2)
+		(DOOR roomxyzxyzwv2 roomxyzxyzwv3)		
+		(WIDE-DOOR roomxyzxyzwv1 roomxyzxyzwv3)
+		(box boxxyzxyzwv1)
+		(box-location roomxyzxyzwv3 boxxyzxyzwv1)
+		(item-location itemxyzxyzwv1 roomxyzxyzwv1)		
+		(item-location itemxyzxyzwv2 roomxyzxyzwv1)		
+		(item-location itemxyzxyzwv3 roomxyzxyzwv1)
+		(DOOR roomxyzxyzw1 roomxyzxyzwv1)	
+
+		(item-location itemxyzxyzwv1 roomxyzxyzwv3)		
+		(item-location itemxyzxyzwv2 roomxyzxyzwv3)		
+		(item-location itemxyzxyzwv3 roomxyzxyzwv2)
+		(not(is-lit roomxyzxyzwv1))
