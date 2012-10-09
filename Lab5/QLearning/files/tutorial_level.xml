@@ -1,0 +1,50 @@
+<level zoom="0.1" id="tutorial_level" g="1.0" kv="0.02" bg_r="45" bg_g="45" bg_b="45" parent="course_menu.xml" multiplayer="false" record_events="true" within_check_count="1"  >
+<abstract_objects>
+</abstract_objects>
+
+<background_objects>
+<WoodenRectangle id="null" x="-886.6666666666666" y="1586.6666666666667" rotx="-856.6666666666666" roty="416.6666666666667" width="2483.3333333333335" height="60.0" angle="0" nrBoardLevels="3" />
+<WoodenRectangle id="null" x="-1621.8731441044374" y="-2700.9214848349765" rotx="-845.789766055579" roty="-616.9214848349765" width="3623.0725171716404" height="60.0" angle="0" nrBoardLevels="3" />
+</background_objects>
+<spring_objects>
+    <ComposedSpringObject x="100" y="-900" angle="0.0" filename="tutorial_rocket.xml" id="the_rocket" />
+</spring_objects>
+<behavior>
+ <events>
+  <PositionEvent  id="much_to_left"  object="the_rocket" x_less_than="-2800" />
+  <PositionEvent  id="much_to_right"  object="the_rocket" x_greater_than="3200" />
+  <PositionEvent  id="much_to_low"  object="the_rocket" y_greater_than="1100" />
+  <PositionEvent  id="much_to_high"  object="the_rocket" y_less_than="-2200" />
+
+  <KeyPressedEvent id="pause_pressed" key="VK_P" />
+  <KeyPressedEvent id="run_pressed" key="VK_O" />
+
+  <LevelStartEvent id="start" />
+
+ </events>
+ <actions>
+
+  <SerialCombinedAction id="teleport_back" auto_reset="true" >
+   <TeleportAction object="the_rocket" new_x="100" new_y="-900" keep_velocities="true" />
+  </SerialCombinedAction>
+
+  <TriggerNamedEventAction id="trigger_pause_controller" event="pause_controller_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_run_controller" event="run_controller_event" auto_reset="true" />
+
+ </actions>
+
+
+ <event_action_pair event="much_to_low" action="teleport_back" />
+ <event_action_pair event="much_to_high" action="teleport_back" />
+ <event_action_pair event="much_to_left" action="teleport_back" />
+ <event_action_pair event="much_to_right" action="teleport_back" />
+
+ <event_action_pair event="pause_pressed" action="trigger_pause_controller" />
+ <event_action_pair event="run_pressed" action="trigger_run_controller" />
+
+
+</behavior>
+
+<!-- <center_mass ref="the_rocket" /> -->
+<key_listener ref="the_rocket" />
+</level>
