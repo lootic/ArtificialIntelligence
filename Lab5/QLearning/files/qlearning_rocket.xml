@@ -1,0 +1,269 @@
+<composed_spring_object name="noname" >
+
+
+<parameters>
+
+  <IntegerParameter id="red_1" value="200" />
+  <IntegerParameter id="red_2" value="170" />
+  <IntegerParameter id="green_1" value="140" />
+  <IntegerParameter id="blue_1" value="0" />
+  <KeyParameter id="forward_key" value="VK_W" />
+  <KeyParameter id="left_key" value="VK_A" />
+  <KeyParameter id="right_key" value="VK_D" />
+
+</parameters>
+
+
+
+<features>
+ <ObjectHorizontalPositionFeature id="x" object="this"/>
+ <ObjectVerticalPositionFeature id="y" object="this"/>
+ <ObjectHorizontalVelocityFeature id="vx" object="this"/>
+ <ObjectVerticalVelocityFeature id="vy" object="this"/>
+ <DiffAngleFeature id="angle" left="ss84m3_7" right="ss84m3_0" original_angle="3.14159" />
+ <AngularVelocityFeature id="w" left="ss84m3_7" right="ss84m3_0" />
+
+
+</features>
+
+
+<controllers>
+ <QLearningController id="qlearning_controller" object="this" />
+</controllers>
+
+<behavior>
+ <events>
+  <NamedEvent id="pause_controller_event" />
+  <NamedEvent id="run_controller_event" />
+  <NamedEvent id="command_1_event" />
+  <NamedEvent id="command_2_event" />
+  <NamedEvent id="command_3_event" />
+  <NamedEvent id="command_4_event" />
+  <NamedEvent id="command_5_event" />
+  <NamedEvent id="command_6_event" />
+  <NamedEvent id="command_7_event" />
+  <NamedEvent id="command_8_event" />
+  <NamedEvent id="command_9_event" />
+  <NamedEvent id="command_10_event" />
+ </events>
+ <actions>
+
+  <PerformCommandAction id="pause_controller" command="pause" object="qlearning_controller" />
+  <PerformCommandAction id="run_controller" command="run" object="qlearning_controller" />
+  <PerformCommandAction id="command_1" command="toggleCustom1" object="qlearning_controller" />
+  <PerformCommandAction id="command_2" command="toggleCustom2" object="qlearning_controller" />
+  <PerformCommandAction id="command_3" command="toggleExplore" object="qlearning_controller" />
+  <PerformCommandAction id="command_4" command="command_4" object="qlearning_controller" />
+  <PerformCommandAction id="command_5" command="command_5" object="qlearning_controller" />
+  <PerformCommandAction id="command_6" command="command_6" object="qlearning_controller" />
+  <PerformCommandAction id="command_7" command="command_7" object="qlearning_controller" />
+  <PerformCommandAction id="command_8" command="command_8" object="qlearning_controller" />
+  <PerformCommandAction id="command_9" command="command_9" object="qlearning_controller" />
+  <PerformCommandAction id="command_10" command="command_10" object="qlearning_controller" />
+
+ </actions>
+
+ <event_action_pair event="pause_controller_event" action="pause_controller" />
+ <event_action_pair event="run_controller_event" action="run_controller" />
+
+ <event_action_pair event="command_1_event" action="command_1" />
+ <event_action_pair event="command_2_event" action="command_2" />
+ <event_action_pair event="command_3_event" action="command_3" />
+ <event_action_pair event="command_4_event" action="command_4" />
+ <event_action_pair event="command_5_event" action="command_5" />
+ <event_action_pair event="command_6_event" action="command_6" />
+ <event_action_pair event="command_7_event" action="command_7" />
+ <event_action_pair event="command_8_event" action="command_8" />
+ <event_action_pair event="command_9_event" action="command_9" />
+ <event_action_pair event="command_10_event" action="command_10" />
+
+
+</behavior>
+
+
+<defined_objects>
+  <RocketEngine  id="rocket_engine_middle"  x="101.27189229259183"  y="-451.9808972545984"  force="66.0"  burst_key="forward_key"  />
+  <RocketEngine  id="rocket_engine_left"  x="25.60390084380112"  y="-458.28086361017506"  force="50.0"  burst_key="right_key"  />
+  <RocketEngine  id="rocket_engine_right"  x="199.9180266848747"  y="-458.62435878859196"  force="50.0"  burst_key="left_key"  />
+</defined_objects>
+<masses>
+<Mass x="93.92423539496878" y="-607.4027136168585" id="ss84m0_3" kg="1.0" />
+<Mass x="115.62256426746667" y="-634.5933442258558" id="ss84m0_4" kg="1.0" />
+<Mass x="86.19904345123477" y="-576.1440823098055" id="ss84m1_3" kg="1.0" />
+<Mass x="117.90966960860163" y="-594.279421647926" id="ss84m1_4" kg="1.0" />
+<Mass x="140.5799650482872" y="-634.4995569712805" id="ss84m0_5" kg="1.0" />
+<Mass x="135.31346047503197" y="-594.2028235962622" id="ss84m1_5" kg="1.0" />
+<Mass x="158.53505923763515" y="-608.9080520965699" id="ss84m0_6" kg="1.0" />
+<Mass x="167.18779582845428" y="-576.8094325151815" id="ss84m1_6" kg="1.0" />
+<Mass x="14.7273678647509" y="-567.744682097314" id="ss84m1_0" kg="1.0" />
+<Mass x="35.65941294563319" y="-585.4995760208661" id="ss84m1_1" kg="1.0" />
+<Mass x="10.992467807103983" y="-538.4916541538519" id="ss84m2_0" kg="1.0" />
+<Mass x="31.720453625729963" y="-539.4263667928578" id="ss84m2_1" kg="1.0" />
+<Mass x="54.62400453691595" y="-574.8368716955795" id="ss84m1_2" kg="1.0" />
+<Mass x="58.34081378492699" y="-539.1935906787531" id="ss84m2_2" kg="1.0" />
+<Mass x="80.70384508420955" y="-546.6202531964096" id="ss84m2_3" kg="1.0" />
+<Mass x="108.52140276225411" y="-559.9814651780406" id="ss84m2_4" kg="1.0" />
+<Mass x="144.40618651861652" y="-559.8760641830311" id="ss84m2_5" kg="1.0" />
+<Mass x="172.5387789951237" y="-550.3738783958559" id="ss84m2_6" kg="1.0" />
+<Mass x="203.78993107986568" y="-578.7163864100793" id="ss84m1_7" kg="1.0" />
+<Mass x="227.32027845452993" y="-587.3908603365524" id="ss84m1_8" kg="1.0" />
+<Mass x="192.77732212863188" y="-541.2448446628506" id="ss84m2_7" kg="1.0" />
+<Mass x="219.16962604596068" y="-538.5271529247148" id="ss84m2_8" kg="1.0" />
+<Mass x="243.54839131300741" y="-566.8596997926885" id="ss84m1_9" kg="1.0" />
+<Mass x="243.34287150519455" y="-536.1558053725529" id="ss84m2_9" kg="1.0" />
+<Mass x="11.837960363177228" y="-506.0628270162059" id="ss84m3_0" kg="1.0" />
+<Mass x="34.23081338503182" y="-506.33866104798864" id="ss84m3_1" kg="1.0" />
+<Mass x="59.932072365289464" y="-508.76503629301965" id="ss84m3_2" kg="1.0" />
+<Mass x="85.93411212222816" y="-510.4419944265329" id="ss84m3_3" kg="1.0" />
+<Mass x="118.41063972713907" y="-522.3173674860651" id="ss84m3_4" kg="1.0" />
+<Mass x="137.7484642834862" y="-522.2105055615914" id="ss84m3_5" kg="1.0" />
+<Mass x="164.67620200838837" y="-510.1438453895693" id="ss84m3_6" kg="1.0" />
+<Mass x="190.6481173249293" y="-508.2214932407501" id="ss84m3_7" kg="1.0" />
+<Mass x="216.34161239855243" y="-505.5018782389827" id="ss84m3_8" kg="1.0" />
+<Mass x="242.08050221309827" y="-502.87659113688585" id="ss84m3_9" kg="1.0" />
+<Mass x="12.517656094445913" y="-475.2917731521955" id="ss84m4_0" kg="1.0" />
+<Mass x="36.70703333147791" y="-472.9295276610068" id="ss84m4_1" kg="1.0" />
+<Mass x="63.86520961731463" y="-473.6087880381008" id="ss84m4_2" kg="1.0" />
+<Mass x="83.80505955749898" y="-470.5782743446423" id="ss84m4_3" kg="1.0" />
+<Mass x="112.65627871637446" y="-477.82401839092455" id="ss84m4_4" kg="1.0" />
+<Mass x="137.6437633794408" y="-477.68706386871975" id="ss84m4_5" kg="1.0" />
+<Mass x="168.18108637782413" y="-469.2521824679319" id="ss84m4_6" kg="1.0" />
+<Mass x="188.16109576434167" y="-472.99590279391566" id="ss84m4_7" kg="1.0" />
+<Mass x="213.497495101368" y="-472.12826670664714" id="ss84m4_8" kg="1.0" />
+<Mass x="239.05488828293284" y="-469.6252916834236" id="ss84m4_9" kg="1.0" />
+<Mass x="19.115300399006276" y="-447.6116543863529" id="ss84m5_0" kg="1.0" />
+<Mass x="39.45762742560394" y="-439.516477574683" id="ss84m5_1" kg="1.0" />
+<Mass x="62.97928988912798" y="-446.94279067749227" id="ss84m5_2" kg="1.0" />
+<Mass x="80.71321479447785" y="-441.6912398059135" id="ss84m5_3" kg="1.0" />
+<Mass x="112.32310253892845" y="-444.1658033029477" id="ss84m5_4" kg="1.0" />
+<Mass x="137.67766638117322" y="-443.95742152525435" id="ss84m5_5" kg="1.0" />
+<Mass x="170.903843793042" y="-442.07563693397253" id="ss84m5_6" kg="1.0" />
+<Mass x="191.64106735413597" y="-449.5359869309495" id="ss84m5_7" kg="1.0" />
+<Mass x="210.31959120212176" y="-438.75402925002743" id="ss84m5_8" kg="1.0" />
+<Mass x="232.9956616316032" y="-441.9438552747089" id="ss84m5_9" kg="1.0" />
+<Mass x="76.68705343691853" y="-415.4781284218342" id="ss84m6_3" kg="1.0" />
+<Mass x="112.4768016818194" y="-425.0294749559118" id="ss84m6_4" kg="1.0" />
+<Mass x="139.92339824558795" y="-425.7216428556494" id="ss84m6_5" kg="1.0" />
+<Mass x="176.59226969682246" y="-414.89025414317507" id="ss84m6_6" kg="1.0" />
+<Mass x="101.27189229259183" y="-451.9808972545984" id="rocket_engine_middle_mass_1" kg="1.0" />
+<Mass x="150.5029284795733" y="-451.76128716793244" id="rocket_engine_middle_mass_2" kg="1.0" />
+<Mass x="84.81949424832138" y="-415.4356955089606" id="rocket_engine_middle_mass_3" kg="1.0" />
+<Mass x="166.7785397142809" y="-415.1457187504642" id="rocket_engine_middle_mass_4" kg="1.0" />
+<Mass x="25.60390084380112" y="-458.28086361017506" id="rocket_engine_left_mass_1" kg="1.0" />
+<Mass x="55.61164851407119" y="-458.1192176336157" id="rocket_engine_left_mass_2" kg="1.0" />
+<Mass x="15.511978171831842" y="-438.3301260749423" id="rocket_engine_left_mass_3" kg="1.0" />
+<Mass x="65.50041873854364" y="-438.0412509898006" id="rocket_engine_left_mass_4" kg="1.0" />
+<Mass x="199.9180266848747" y="-458.62435878859196" id="rocket_engine_right_mass_1" kg="1.0" />
+<Mass x="229.9253731163932" y="-458.43534715987187" id="rocket_engine_right_mass_2" kg="1.0" />
+<Mass x="189.78775916394736" y="-438.6745968510437" id="rocket_engine_right_mass_3" kg="1.0" />
+<Mass x="239.77464688631352" y="-438.35900075661743" id="rocket_engine_right_mass_4" kg="1.0" />
+</masses>
+<springs>
+<Spring id="spring_1" from="rocket_engine_middle_mass_3" to="ss84m6_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_2" from="rocket_engine_middle_mass_4" to="ss84m6_6" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_3" from="rocket_engine_middle_mass_1" to="ss84m4_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_4" from="rocket_engine_middle_mass_2" to="ss84m4_6" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_5" from="rocket_engine_middle_mass_4" to="ss84m5_6" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_6" from="rocket_engine_middle_mass_2" to="ss84m5_6" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_7" from="rocket_engine_middle_mass_1" to="ss84m5_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_8" from="rocket_engine_middle_mass_3" to="ss84m5_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_9" from="rocket_engine_middle_mass_1" to="ss84m4_4" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_10" from="rocket_engine_middle_mass_2" to="ss84m4_5" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_11" from="rocket_engine_middle_mass_2" to="ss84m3_6" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring id="spring_12" from="rocket_engine_middle_mass_1" to="ss84m3_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+
+
+<InvicibleSpring from="ss84m5_2" to="ss84m5_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m4_2" to="ss84m5_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m5_2" to="ss84m4_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m5_1" to="ss84m6_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m5_2" to="ss84m6_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m5_1" to="ss84m5_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m4_7" to="ss84m5_6" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m4_6" to="ss84m5_7" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m5_6" to="ss84m5_7" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m6_6" to="ss84m5_8" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m5_7" to="ss84m6_6" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m5_6" to="ss84m5_8" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m1_2" to="ss84m1_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m1_1" to="ss84m0_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m2_2" to="ss84m1_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m2_3" to="ss84m1_2" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m1_1" to="ss84m1_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m1_2" to="ss84m0_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m2_6" to="ss84m1_7" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m1_6" to="ss84m2_7" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m1_6" to="ss84m1_7" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m0_6" to="ss84m1_8" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m1_6" to="ss84m1_8" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<InvicibleSpring from="ss84m1_7" to="ss84m0_6" k="20.0" d="0.1" forceThreshold="7000.0"  />
+
+
+<Spring from="rocket_engine_left_mass_3" to="ss84m4_0" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_left_mass_4" to="ss84m4_3" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_left_mass_2" to="ss84m3_2" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_left_mass_1" to="ss84m3_0" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_left_mass_1" to="ss84m4_2" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_left_mass_2" to="ss84m4_0" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_right_mass_3" to="ss84m4_6" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_right_mass_4" to="ss84m4_9" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_right_mass_1" to="ss84m4_7" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_right_mass_2" to="ss84m4_9" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_right_mass_2" to="ss84m4_7" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_right_mass_1" to="ss84m4_9" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_right_mass_1" to="ss84m3_7" k="20.0" d="0.1" forceThreshold="7000.0"  />
+<Spring from="rocket_engine_right_mass_2" to="ss84m3_9" k="20.0" d="0.1" forceThreshold="7000.0"  />
+</springs>
+<colors>
+<color r="red_1" g="red_1" b="red_1" id="col_191_38_0" />
+<color r="red_2" g="red_2" b="red_2" id="col_178_51_0" />
+<color r="12" g="0" b="0" id="col_12_0_0" />
+</colors>
+<stable_structures>
+<stable_crushable_structure id="stable_crushable_structure_84" thres="7000.0" k="30.0" d="0.1" >
+<segment upper_left = "ss84m0_3" upper_right = "ss84m0_4" lower_left = "ss84m1_3" lower_right = "ss84m1_4" color = "col_191_38_0" />
+<segment upper_left = "ss84m0_4" upper_right = "ss84m0_5" lower_left = "ss84m1_4" lower_right = "ss84m1_5" color = "col_191_38_0" />
+<segment upper_left = "ss84m0_5" upper_right = "ss84m0_6" lower_left = "ss84m1_5" lower_right = "ss84m1_6" color = "col_178_51_0" />
+<segment upper_left = "ss84m1_0" upper_right = "ss84m1_1" lower_left = "ss84m2_0" lower_right = "ss84m2_1" color = "col_191_38_0" />
+<segment upper_left = "ss84m1_1" upper_right = "ss84m1_2" lower_left = "ss84m2_1" lower_right = "ss84m2_2" color = "col_191_38_0" />
+<segment upper_left = "ss84m1_3" upper_right = "ss84m1_4" lower_left = "ss84m2_3" lower_right = "ss84m2_4" color = "col_191_38_0" />
+<segment upper_left = "ss84m1_4" upper_right = "ss84m1_5" lower_left = "ss84m2_4" lower_right = "ss84m2_5" color = "col_12_0_0" />
+<segment upper_left = "ss84m1_5" upper_right = "ss84m1_6" lower_left = "ss84m2_5" lower_right = "ss84m2_6" color = "col_178_51_0" />
+<segment upper_left = "ss84m1_7" upper_right = "ss84m1_8" lower_left = "ss84m2_7" lower_right = "ss84m2_8" color = "col_178_51_0" />
+<segment upper_left = "ss84m1_8" upper_right = "ss84m1_9" lower_left = "ss84m2_8" lower_right = "ss84m2_9" color = "col_178_51_0" />
+<segment upper_left = "ss84m2_0" upper_right = "ss84m2_1" lower_left = "ss84m3_0" lower_right = "ss84m3_1" color = "col_191_38_0" />
+<segment upper_left = "ss84m2_1" upper_right = "ss84m2_2" lower_left = "ss84m3_1" lower_right = "ss84m3_2" color = "col_191_38_0" />
+<segment upper_left = "ss84m2_2" upper_right = "ss84m2_3" lower_left = "ss84m3_2" lower_right = "ss84m3_3" color = "col_191_38_0" />
+<segment upper_left = "ss84m2_3" upper_right = "ss84m2_4" lower_left = "ss84m3_3" lower_right = "ss84m3_4" color = "col_191_38_0" />
+<segment upper_left = "ss84m2_4" upper_right = "ss84m2_5" lower_left = "ss84m3_4" lower_right = "ss84m3_5" color = "col_12_0_0" />
+<segment upper_left = "ss84m2_5" upper_right = "ss84m2_6" lower_left = "ss84m3_5" lower_right = "ss84m3_6" color = "col_178_51_0" />
+<segment upper_left = "ss84m2_6" upper_right = "ss84m2_7" lower_left = "ss84m3_6" lower_right = "ss84m3_7" color = "col_178_51_0" />
+<segment upper_left = "ss84m2_7" upper_right = "ss84m2_8" lower_left = "ss84m3_7" lower_right = "ss84m3_8" color = "col_178_51_0" />
+<segment upper_left = "ss84m2_8" upper_right = "ss84m2_9" lower_left = "ss84m3_8" lower_right = "ss84m3_9" color = "col_178_51_0" />
+<segment upper_left = "ss84m3_0" upper_right = "ss84m3_1" lower_left = "ss84m4_0" lower_right = "ss84m4_1" color = "col_191_38_0" />
+<segment upper_left = "ss84m3_1" upper_right = "ss84m3_2" lower_left = "ss84m4_1" lower_right = "ss84m4_2" color = "col_191_38_0" />
+<segment upper_left = "ss84m3_2" upper_right = "ss84m3_3" lower_left = "ss84m4_2" lower_right = "ss84m4_3" color = "col_191_38_0" />
+<segment upper_left = "ss84m3_3" upper_right = "ss84m3_4" lower_left = "ss84m4_3" lower_right = "ss84m4_4" color = "col_178_51_0" />
+<segment upper_left = "ss84m3_4" upper_right = "ss84m3_5" lower_left = "ss84m4_4" lower_right = "ss84m4_5" color = "col_178_51_0" />
+<segment upper_left = "ss84m3_5" upper_right = "ss84m3_6" lower_left = "ss84m4_5" lower_right = "ss84m4_6" color = "col_178_51_0" />
+<segment upper_left = "ss84m3_6" upper_right = "ss84m3_7" lower_left = "ss84m4_6" lower_right = "ss84m4_7" color = "col_178_51_0" />
+<segment upper_left = "ss84m3_7" upper_right = "ss84m3_8" lower_left = "ss84m4_7" lower_right = "ss84m4_8" color = "col_178_51_0" />
+<segment upper_left = "ss84m3_8" upper_right = "ss84m3_9" lower_left = "ss84m4_8" lower_right = "ss84m4_9" color = "col_178_51_0" />
+<segment upper_left = "ss84m4_0" upper_right = "ss84m4_1" lower_left = "ss84m5_0" lower_right = "ss84m5_1" color = "col_191_38_0" />
+<segment upper_left = "ss84m4_1" upper_right = "ss84m4_2" lower_left = "ss84m5_1" lower_right = "ss84m5_2" color = "col_191_38_0" />
+<segment upper_left = "ss84m4_3" upper_right = "ss84m4_4" lower_left = "ss84m5_3" lower_right = "ss84m5_4" color = "col_178_51_0" />
+<segment upper_left = "ss84m4_4" upper_right = "ss84m4_5" lower_left = "ss84m5_4" lower_right = "ss84m5_5" color = "col_178_51_0" />
+<segment upper_left = "ss84m4_5" upper_right = "ss84m4_6" lower_left = "ss84m5_5" lower_right = "ss84m5_6" color = "col_178_51_0" />
+<segment upper_left = "ss84m4_7" upper_right = "ss84m4_8" lower_left = "ss84m5_7" lower_right = "ss84m5_8" color = "col_178_51_0" />
+<segment upper_left = "ss84m4_8" upper_right = "ss84m4_9" lower_left = "ss84m5_8" lower_right = "ss84m5_9" color = "col_178_51_0" />
+<segment upper_left = "ss84m5_3" upper_right = "ss84m5_4" lower_left = "ss84m6_3" lower_right = "ss84m6_4" color = "col_178_51_0" />
+<segment upper_left = "ss84m5_4" upper_right = "ss84m5_5" lower_left = "ss84m6_4" lower_right = "ss84m6_5" color = "col_178_51_0" />
+<segment upper_left = "ss84m5_5" upper_right = "ss84m5_6" lower_left = "ss84m6_5" lower_right = "ss84m6_6" color = "col_178_51_0" />
+</stable_crushable_structure></stable_structures>
+<solid_objects>
+</solid_objects>
+<keypress_delegate ref = "rocket_engine_middle" />
+<keypress_delegate ref = "rocket_engine_left" />
+<keypress_delegate ref = "rocket_engine_right" />
+<center_mass ref="stable_crushable_structure_84" />
+</composed_spring_object>

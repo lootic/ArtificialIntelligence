@@ -1,0 +1,81 @@
+<level zoom="0.1" id="tutorial_level" g="1.0" kv="0.02" bg_r="45" bg_g="45" bg_b="45" parent="course_menu.xml" multiplayer="false" record_events="true" within_check_count="1"  >
+<abstract_objects>
+</abstract_objects>
+
+<background_objects>
+<WoodenRectangle id="null" x="-886.6666666666666" y="1586.6666666666667" rotx="-856.6666666666666" roty="416.6666666666667" width="2483.3333333333335" height="60.0" angle="0" nrBoardLevels="3" />
+<WoodenRectangle id="null" x="-1621.8731441044374" y="-2700.9214848349765" rotx="-845.789766055579" roty="-616.9214848349765" width="3623.0725171716404" height="60.0" angle="0" nrBoardLevels="3" />
+</background_objects>
+<spring_objects>
+    <ComposedSpringObject x="100" y="-900" angle="0.0" filename="qlearning_rocket.xml" id="the_rocket" />
+</spring_objects>
+<behavior>
+ <events>
+  <PositionEvent  id="much_to_left"  object="the_rocket" x_less_than="-2800" />
+  <PositionEvent  id="much_to_right"  object="the_rocket" x_greater_than="3200" />
+  <PositionEvent  id="much_to_low"  object="the_rocket" y_greater_than="1100" />
+  <PositionEvent  id="much_to_high"  object="the_rocket" y_less_than="-2200" />
+
+  <KeyPressedEvent id="pause_pressed" key="VK_P" />
+  <KeyPressedEvent id="run_pressed" key="VK_O" />
+  <KeyPressedEvent id="1_pressed" key="VK_1" />
+  <KeyPressedEvent id="2_pressed" key="VK_2" />
+  <KeyPressedEvent id="3_pressed" key="VK_E" />
+  <KeyPressedEvent id="4_pressed" key="VK_4" />
+  <KeyPressedEvent id="5_pressed" key="VK_5" />
+  <KeyPressedEvent id="6_pressed" key="VK_6" />
+  <KeyPressedEvent id="7_pressed" key="VK_7" />
+  <KeyPressedEvent id="8_pressed" key="VK_8" />
+  <KeyPressedEvent id="9_pressed" key="VK_9" />
+  <KeyPressedEvent id="0_pressed" key="VK_0" />
+
+  <LevelStartEvent id="start" />
+
+ </events>
+ <actions>
+
+  <SerialCombinedAction id="teleport_back" auto_reset="true" >
+   <TeleportAction object="the_rocket" new_x="100" new_y="-900" keep_velocities="true" />
+  </SerialCombinedAction>
+
+  <TriggerNamedEventAction id="trigger_pause_controller" event="pause_controller_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_run_controller" event="run_controller_event" auto_reset="true" />
+
+  <TriggerNamedEventAction id="trigger_1_command" event="command_1_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_2_command" event="command_2_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_3_command" event="command_3_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_4_command" event="command_4_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_5_command" event="command_5_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_6_command" event="command_6_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_7_command" event="command_7_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_8_command" event="command_8_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_9_command" event="command_9_event" auto_reset="true" />
+  <TriggerNamedEventAction id="trigger_10_command" event="command_10_event" auto_reset="true" />
+
+ </actions>
+
+
+ <event_action_pair event="much_to_low" action="teleport_back" />
+ <event_action_pair event="much_to_high" action="teleport_back" />
+ <event_action_pair event="much_to_left" action="teleport_back" />
+ <event_action_pair event="much_to_right" action="teleport_back" />
+
+ <event_action_pair event="pause_pressed" action="trigger_pause_controller" />
+ <event_action_pair event="run_pressed" action="trigger_run_controller" />
+ <event_action_pair event="1_pressed" action="trigger_1_command" />
+ <event_action_pair event="2_pressed" action="trigger_2_command" />
+ <event_action_pair event="3_pressed" action="trigger_3_command" />
+ <event_action_pair event="4_pressed" action="trigger_4_command" />
+ <event_action_pair event="5_pressed" action="trigger_5_command" />
+ <event_action_pair event="6_pressed" action="trigger_6_command" />
+ <event_action_pair event="7_pressed" action="trigger_7_command" />
+ <event_action_pair event="8_pressed" action="trigger_8_command" />
+ <event_action_pair event="9_pressed" action="trigger_9_command" />
+ <event_action_pair event="0_pressed" action="trigger_10_command" />
+
+
+</behavior>
+
+<!-- <center_mass ref="the_rocket" /> -->
+<key_listener ref="the_rocket" />
+</level>
