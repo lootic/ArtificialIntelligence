@@ -1,1 +1,0 @@
-javac -classpath ../lib/* */*.java

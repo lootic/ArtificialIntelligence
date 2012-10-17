@@ -1,3 +1,0 @@
-module add /home/TDDC17/www-pub/info/labs/planning/planners.mod
-ff -o shakey.pddl -f shakey2.pddl
-ipp -o shakey.pddl -f shakey2.pddl
