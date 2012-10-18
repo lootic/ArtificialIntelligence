@@ -2,59 +2,62 @@ public class StateAndReward {
 
 	public final static String LEFT = "Left";
 	public final static String RIGHT = "Right";
-	public final static String FINE_TUNING_LEFT = "FineTuningLeft";	
+	public final static String FINE_TUNING_LEFT = "FineTuningLeft";
 	public final static String FINE_TUNING_RIGHT = "FineTuningRight";
 	public final static String FACING_UP = "FacingUp";
+	private static double previousAngle = 0f;
 
 	/* State discretization function for the angle controller */
+	/*
+	 * public static String getStateAngle(double angle, double vx, double vy) {
+	 * if(Math.abs(angle) < Math.PI/4f) { if(angle > 0) { return
+	 * FINE_TUNING_RIGHT; } else if(angle < 0) { return FINE_TUNING_LEFT; } else
+	 * { return FACING_UP; }
+	 * 
+	 * } else { if(angle > 0) { return LEFT; } else if(angle < 0) { return
+	 * RIGHT; } } return null; }
+	 */
+
 	public static String getStateAngle(double angle, double vx, double vy) {
-		if(Math.abs(angle) < Math.PI/6f) {
-			if(angle > 0) {
-				return FINE_TUNING_RIGHT;
-			}
-			else if(angle < 0) {				
-				return FINE_TUNING_LEFT;
-			}
-			else {
-				return FACING_UP;
-			}
-			
+		if (Math.abs(angle) < Math.PI / 24) {
+			return "0";
+		} else if (angle > 0) {
+			return "1";
+		} else {
+			return "2";
 		}
-		else {
-			if(angle > 0) {
-				return LEFT;
-			}
-			else if(angle < 0) {
-				return RIGHT;
-			}
-		}
-		return null;
+		// return Long.toString(Math.round(Math.toDegrees(angle)));
 	}
 
 	/* Reward function for the angle controller */
 	public static double getRewardAngle(double angle, double vx, double vy) {
+		// System.out.println("angle="+angle+", absAngle="+Math.abs(angle));
 
-		return Math.PI - Math.abs(angle);
+		return Math.pow((Math.PI - Math.abs(angle)), 2);
 	}
 
 	/* State discretization function for the full hover controller */
 	public static String getStateHover(double angle, double vx, double vy) {
-
-		/* TODO: IMPLEMENT THIS FUNCTION */
-
-		String state = "OneStateToRuleThemAll2";
-		
-		return state;
+		if (vx > 1) {
+			if (vy > 0) {
+				return "0";
+			} else {
+				return "1";
+			}
+		} else if (vy > 1) {
+			if (vx > 0) {
+				return "2";
+			} else {
+				return "3";
+			}
+		} else {
+			return "4";
+		}
 	}
 
 	/* Reward function for the full hover controller */
 	public static double getRewardHover(double angle, double vx, double vy) {
-
-		/* TODO: IMPLEMENT THIS FUNCTION */
-		
-		double reward = 0;
-
-		return reward;
+		return (30 - Math.abs(vx)) * (30 - Math.abs(vy));
 	}
 
 	// ///////////////////////////////////////////////////////////
