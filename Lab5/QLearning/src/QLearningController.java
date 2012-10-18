@@ -156,6 +156,10 @@ public class QLearningController extends Controller {
 				
 				int action = selectAction(new_state); /* Make sure you understand how it selects an action */
 
+				if(Qtable.get(prev_stateaction) <= StateAndReward.getRewardAngle) {
+					Qtable.put(prev_stateaction, StateAndReward.getRewardAngle);
+				}
+
 				performAction(action);
 				
 				/* Only print every 10th line to reduce spam */
