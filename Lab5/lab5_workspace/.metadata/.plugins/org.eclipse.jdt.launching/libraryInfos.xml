@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="C:\Program Files\Java\jre6" version="1.6.0_31">
+<bootpath>
+<entry path="C:\Program Files\Java\jre6\lib\resources.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\rt.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\sunrsasign.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\jsse.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\jce.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\charsets.jar"/>
+<entry path="C:\Program Files\Java\jre6\lib\modules\jdk.boot.jar"/>
+<entry path="C:\Program Files\Java\jre6\classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="C:\Program Files\Java\jre6\lib\ext"/>
+<entry path="C:\Windows\Sun\Java\lib\ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="C:\Program Files\Java\jre6\lib\endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+<libraryInfo home="/usr/jdk/instances/jdk1.6.0" version="1.6.0_33">
+<bootpath>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/lib/resources.jar"/>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/lib/rt.jar"/>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/lib/sunrsasign.jar"/>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/lib/jsse.jar"/>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/lib/jce.jar"/>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/lib/charsets.jar"/>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/lib/modules/jdk.boot.jar"/>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/classes"/>
+</bootpath>
+<extensionDirs>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/lib/ext"/>
+<entry path="/usr/jdk/packages/lib/ext"/>
+</extensionDirs>
+<endorsedDirs>
+<entry path="/usr/jdk/instances/jdk1.6.0/jre/lib/endorsed"/>
+</endorsedDirs>
+</libraryInfo>
+</libraryInfos>

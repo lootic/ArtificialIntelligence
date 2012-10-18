@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.rubypeople.rdt.launching.LaunchConfigurationTypeRubyApplication">
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="/home/crida498/lab5/lab5_workspace/.metadata/.plugins/com.aptana.rdt/sources_list.txt"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_CONSOLE_OUTPUT_ON" value="false"/>
+<booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="true"/>
+<booleanAttribute key="org.eclipse.debug.ui.private" value="true"/>
+<booleanAttribute key="org.rubypeople.rdt.launching.FORCE_NO_CONSOLE" value="true"/>
+<stringAttribute key="org.rubypeople.rdt.launching.INTERPRETER_ARGUMENTS" value=""/>
+<booleanAttribute key="org.rubypeople.rdt.launching.IS_SUDO" value="false"/>
+<stringAttribute key="org.rubypeople.rdt.launching.PROGRAM_ARGUMENTS" value="sources -l"/>
+<stringAttribute key="org.rubypeople.rdt.launching.VM_INSTALL_NAME" value="local"/>
+<stringAttribute key="org.rubypeople.rdt.launching.VM_INSTALL_TYPE_ID" value="org.rubypeople.rdt.launching.StandardVMType"/>
+<mapAttribute key="org.rubypeople.rdt.launchingVM_INSTALL_TYPE_SPECIFIC_ATTRS_MAP">
+<mapEntry key="org.rubypeople.rdt.launching.RUBY_COMMAND" value="ruby"/>
+</mapAttribute>
+</launchConfiguration>

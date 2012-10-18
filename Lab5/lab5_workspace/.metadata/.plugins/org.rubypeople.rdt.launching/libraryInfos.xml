@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<libraryInfos>
+<libraryInfo home="/usr/local" version="1.9.3" vmTypeId="org.rubypeople.rdt.launching.StandardVMType">
+<bootpath>
+<entry path="/sw/ruby-1.9.3-p0/lib/ruby/site_ruby/1.9.1"/>
+<entry path="/sw/ruby-1.9.3-p0/lib/ruby/site_ruby/1.9.1/sparc-solaris2.10"/>
+<entry path="/sw/ruby-1.9.3-p0/lib/ruby/site_ruby"/>
+<entry path="/sw/ruby-1.9.3-p0/lib/ruby/vendor_ruby/1.9.1"/>
+<entry path="/sw/ruby-1.9.3-p0/lib/ruby/vendor_ruby/1.9.1/sparc-solaris2.10"/>
+<entry path="/sw/ruby-1.9.3-p0/lib/ruby/vendor_ruby"/>
+<entry path="/sw/ruby-1.9.3-p0/lib/ruby/1.9.1"/>
+<entry path="/sw/ruby-1.9.3-p0/lib/ruby/1.9.1/sparc-solaris2.10"/>
+</bootpath>
+</libraryInfo>
+<libraryInfo home="/sw/eclipse-3.5.2/plugins/org.jruby_1.2.0.9419p2" version="1.8.6" vmTypeId="org.rubypeople.rdt.launching.JRubyVMType">
+<bootpath>
+<entry path="/sw/eclipse-3.5.2/plugins/org.jruby_1.2.0.9419p2/lib/ruby/site_ruby/1.8"/>
+<entry path="/sw/eclipse-3.5.2/plugins/org.jruby_1.2.0.9419p2/lib/ruby/site_ruby"/>
+<entry path="/sw/eclipse-3.5.2/plugins/org.jruby_1.2.0.9419p2/lib/ruby/1.8"/>
+</bootpath>
+</libraryInfo>
+</libraryInfos>
