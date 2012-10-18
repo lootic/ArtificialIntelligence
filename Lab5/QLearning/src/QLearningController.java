@@ -31,8 +31,16 @@ public class QLearningController extends Controller {
 	double previous_vx = 0;
 	double previous_vy = 0;
 	double previous_angle = 0;
-	int previous_action = 0; 
-	
+	int previous_action = 0;
+		
+	private static int NO_ENGINE = 0;	
+	private static int LEFT_ENGINE = 1; 
+	private static int RIGHT_ENGINE = 2;	
+	private static int MIDDLE_ENGINE = 3;	
+	private static int MIDDLE_AND_LEFT_ENGINES = 4;
+	private static int MIDDLE_AND_RIGHT_ENGINES = 5;
+	private static int ALL_ENGINES = 6;
+
 	/* The tables used by Q-learning */
 	Hashtable<String, Double> Qtable = new Hashtable<String, Double>(); /* Contains the Q-values - the state-action utilities */
 	Hashtable<String, Integer> Ntable = new Hashtable<String, Integer>(); /* Keeps track of how many times each state-action combination has been used */
@@ -85,11 +93,22 @@ public class QLearningController extends Controller {
 	/* Performs the chosen action */
 	void performAction(int action) {
 
-		/* Fire zeh rockets! */
-		/* TODO: Remember to change NUM_ACTIONS constant to reflect the number of actions (including 0, no action) */
-		
-		/* TODO: IMPLEMENT THIS FUNCTION */
-		
+		switch(action) {
+		case NO_ENGINE:
+			break;
+		case LEFT_ENGINE:
+			break;
+		case RIGHT_ENGINE:
+			break;
+		case MIDDLE_ENGINE:
+			break;
+		case MIDDLE_AND_LEFT_ENGINES:
+			break;
+		case MIDDLE_AND_RIGHT_ENGINES:
+			break;
+		case ALL_ENGINES:
+			break;
+		}	
 	}
 
 	/* Main decision loop. Called every iteration by the simulator */
@@ -123,7 +142,6 @@ public class QLearningController extends Controller {
 					Qtable.put(prev_stateaction, 0.0);
 				} 
 
-				
 				/* TODO: IMPLEMENT Q-UPDATE HERE! */
 				
 				/* See top for constants and below for helper functions */

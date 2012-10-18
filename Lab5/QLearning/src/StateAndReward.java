@@ -1,24 +1,38 @@
 public class StateAndReward {
 
-	
+	public final static String LEFT = "Left";
+	public final static String RIGHT = "Right";
+	public final static String FINE_TUNING_LEFT = "FineTuningLeft";	
+	public final static String FINE_TUNING_RIGHT = "FineTuningRight";
+	public final static String FACING_UP = "FacingUp";
+
 	/* State discretization function for the angle controller */
 	public static String getStateAngle(double angle, double vx, double vy) {
-
-		/* TODO: IMPLEMENT THIS FUNCTION */
-
-		String state = "OneStateToRuleThemAll";
-		
-		return state;
+		if(Math.abs(angle) < Math.PI()/6f) {
+			if(angle > 0) {
+				return FINE_TUNING_RIGHT;
+			}
+			else if(angle < 0) {				
+				return FINE_TUNING_LEFT;
+			}
+			else {
+				return FACING_UP;
+			}
+		}
+		else {
+			if(angle > 0) {
+				return LEFT;
+			}
+			else if(angle < 0) {
+				return RIGHT;
+			}
+		}
 	}
 
 	/* Reward function for the angle controller */
 	public static double getRewardAngle(double angle, double vx, double vy) {
 
-		/* TODO: IMPLEMENT THIS FUNCTION */
-		
-		double reward = 0;
-
-		return reward;
+		return Math.PI() - Math.abs(angle);
 	}
 
 	/* State discretization function for the full hover controller */
