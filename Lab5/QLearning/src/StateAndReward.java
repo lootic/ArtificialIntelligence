@@ -8,7 +8,7 @@ public class StateAndReward {
 
 	/* State discretization function for the angle controller */
 	public static String getStateAngle(double angle, double vx, double vy) {
-		if(Math.abs(angle) < Math.PI()/6f) {
+		if(Math.abs(angle) < Math.PI/6f) {
 			if(angle > 0) {
 				return FINE_TUNING_RIGHT;
 			}
@@ -18,6 +18,7 @@ public class StateAndReward {
 			else {
 				return FACING_UP;
 			}
+			
 		}
 		else {
 			if(angle > 0) {
@@ -27,12 +28,13 @@ public class StateAndReward {
 				return RIGHT;
 			}
 		}
+		return null;
 	}
 
 	/* Reward function for the angle controller */
 	public static double getRewardAngle(double angle, double vx, double vy) {
 
-		return Math.PI() - Math.abs(angle);
+		return Math.PI - Math.abs(angle);
 	}
 
 	/* State discretization function for the full hover controller */

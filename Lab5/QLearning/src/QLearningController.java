@@ -33,13 +33,13 @@ public class QLearningController extends Controller {
 	double previous_angle = 0;
 	int previous_action = 0;
 		
-	private static int NO_ENGINE = 0;	
-	private static int LEFT_ENGINE_ON = 1; 
-	private static int RIGHT_ENGINE_ON = 2;	
-	private static int MIDDLE_ENGINE_ON = 3;	
-	private static int LEFT_ENGINE_OFF = 4;
-	private static int RIGHT_ENGINE_OFF = 5;
-	private static int MIDDLE_ENGINE_OFF = 6;
+	private static final int NO_ENGINE = 0;	
+	private static final int LEFT_ENGINE_ON = 1; 
+	private static final int RIGHT_ENGINE_ON = 2;	
+	private static final int MIDDLE_ENGINE_ON = 3;	
+	private static final int LEFT_ENGINE_OFF = 4;
+	private static final int RIGHT_ENGINE_OFF = 5;
+	private static final int MIDDLE_ENGINE_OFF = 6;
 
 	/* The tables used by Q-learning */
 	Hashtable<String, Double> Qtable = new Hashtable<String, Double>(); /* Contains the Q-values - the state-action utilities */
@@ -92,7 +92,7 @@ public class QLearningController extends Controller {
 
 	/* Performs the chosen action */
 	void performAction(int action) {
-
+ 
 		switch(action) {
 		case NO_ENGINE:
 			resetRockets();

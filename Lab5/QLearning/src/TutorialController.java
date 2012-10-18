@@ -35,12 +35,33 @@ public class TutorialController extends Controller {
 		leftRocket = (RocketEngine) cso.getObjectById("rocket_engine_left");
 		rightRocket = (RocketEngine) cso.getObjectById("rocket_engine_right");
 		middleRocket = (RocketEngine) cso.getObjectById("rocket_engine_middle");
+		
+		
 	}
 
     public void tick(int currentTime) {
+    	System.out.println(" vx: " + vx.getValue()+ " vy: " + vy.getValue()+" angle: " + angle.getValue()) ;
+    	leftRocket.setBursting(false);
+    	rightRocket.setBursting(false);
+    	middleRocket.setBursting(false);
 
-    	/* TODO: Insert your code here */
-    	
+    	if (Math.abs(angle.getValue())==0.01){
+    		
+    	} else if (vx.getValue()>0.1){
+    		rightRocket.setBursting(true);
+    		middleRocket.setBursting(false);
+    	} else if (vx.getValue()<-0.1){
+    		leftRocket.setBursting(true);
+    		middleRocket.setBursting(false);
+    	} else if (angle.getValue()<-0.05){
+    		leftRocket.setBursting(true);
+    	} else if (angle.getValue()>+0.05){
+    		rightRocket.setBursting(true);
+    	}
+    	if (vy.getValue()>0){
+    		middleRocket.setBursting(true);
+    	}
+
     }
 
 }
