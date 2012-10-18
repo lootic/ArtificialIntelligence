@@ -34,12 +34,12 @@ public class QLearningController extends Controller {
 	int previous_action = 0;
 		
 	private static int NO_ENGINE = 0;	
-	private static int LEFT_ENGINE = 1; 
-	private static int RIGHT_ENGINE = 2;	
-	private static int MIDDLE_ENGINE = 3;	
-	private static int MIDDLE_AND_LEFT_ENGINES = 4;
-	private static int MIDDLE_AND_RIGHT_ENGINES = 5;
-	private static int ALL_ENGINES = 6;
+	private static int LEFT_ENGINE_ON = 1; 
+	private static int RIGHT_ENGINE_ON = 2;	
+	private static int MIDDLE_ENGINE_ON = 3;	
+	private static int LEFT_ENGINE_OFF = 4;
+	private static int RIGHT_ENGINE_OFF = 5;
+	private static int MIDDLE_ENGINE_OFF = 6;
 
 	/* The tables used by Q-learning */
 	Hashtable<String, Double> Qtable = new Hashtable<String, Double>(); /* Contains the Q-values - the state-action utilities */
@@ -95,18 +95,25 @@ public class QLearningController extends Controller {
 
 		switch(action) {
 		case NO_ENGINE:
+			resetRockets();
 			break;
-		case LEFT_ENGINE:
+		case LEFT_ENGINE_ON:
+			leftEngine.setBursting(true);
 			break;
-		case RIGHT_ENGINE:
+		case RIGHT_ENGINE_ON:
+			rightEngine.setBursting(true);			
 			break;
-		case MIDDLE_ENGINE:
+		case MIDDLE_ENGINE_ON:
+			middleEngine.setBursting(true);			
 			break;
-		case MIDDLE_AND_LEFT_ENGINES:
+		case LEFT_ENGINE_OFF:
+			leftEngine.setBursting(false);			
 			break;
-		case MIDDLE_AND_RIGHT_ENGINES:
+		case RIGHT_ENGINE_OFF:
+			rightEngine.setBursting(false);			
 			break;
-		case ALL_ENGINES:
+		case MIDDLE_ENGINE_OFF:
+			leftEngine.setBursting(false);
 			break;
 		}	
 	}
