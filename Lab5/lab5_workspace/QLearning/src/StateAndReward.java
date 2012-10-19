@@ -41,10 +41,10 @@ public class StateAndReward {
 		String temp="";
 		
 		temp +="vx"+discretize(vx, 3,-10,10);
-		temp +="vy"+discretize(vy, 7,-10,10);
+		temp +="vy"+discretize(vy, 11,-10,10);
 		temp +="vxvy"+discretize(Math.pow(vx+vy,2), 2,0,2);
 		temp +="angle"+discretize(angle, 5,-4,4);
-		temp +="angle2"+discretize2(angle, 3,-0.1,0.1);
+		temp +="angle2"+discretize2(angle, 3,-0.06,0.06);
 
 		return temp;
 	}
