@@ -227,14 +227,40 @@ public class QLearningController extends Controller {
 				/* TODO: IMPLEMENT Q-UPDATE HERE! */
 
 				/* See top for constants and below for helper functions */
-
-				int action = selectAction(new_state); /*
+				
+				int action = selectAction(new_state); 
+				if (Ntable.get(new_state + action) == null) {
+					// System.out.println("New Value!");
+					Ntable.put(new_state + action, 0);
+				}
+				if (Qtable.get(new_state + action) == null) {
+					Qtable.put(new_state + action, 0d);
+				}
+				if (Ntable.get(previous_state) == null) {
+					// System.out.println("New Value!");
+					Ntable.put(previous_state, 0);
+				}
+				if (Qtable.get(previous_state) == null) {
+					Qtable.put(previous_state, 0d);
+				}
+				double oldValue = Qtable.get(previous_state);
+				double alpha = alpha(Ntable.get(previous_state));
+				/*
 				 * Make sure you understand
 				 * how it selects an action
 				 */
 				performAction(action);
 				// System.out.println(new_state);
-
+				double reward = StateAndReward.getRewardHover(angle.getValue(), vx.getValue(), vy.getValue());
+				double maxFutureValue = 0;
+				for(int i=0; i < NUM_ACTIONS; ++i){
+					if(Qtable.get(new_state+i) == null) {
+						continue;
+					}
+					maxFutureValue = Math.max(maxFutureValue, Qtable.get(new_state+i));
+				}
+				Qtable.put(new_state+action, oldValue + alpha*(reward + 0.95*maxFutureValue - oldValue));
+				/*
 				if (explore) {
 					if (Ntable.get(new_state + action) == null) {
 						// System.out.println("New Value!");
@@ -245,8 +271,7 @@ public class QLearningController extends Controller {
 					}
 					int numOfExplorations = Ntable.get(new_state + action);
 					// System.out.println("numOfExplorations="+numOfExplorations);
-					Qtable.put(
-							new_state + action,
+					Qtable.put(new_state + action,
 							Qtable.get(new_state + action)
 							* 0.95
 							//									+ StateAndReward.getRewardAngle(

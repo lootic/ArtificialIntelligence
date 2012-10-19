@@ -14566,90 +14566,15 @@ org.eclipse.core.runtime.CoreException: Main type not specified
 
 !ENTRY org.eclipse.wst.common.project.facet.core 4 0 2012-09-28 08:34:25.109
 !MESSAGE Project facet jst.web has not been defined. It is used in plugin org.eclipse.wst.jsdt.web.core.
-!SESSION 2012-10-09 11:59:51.421 -----------------------------------------------
+!SESSION 2012-10-19 09:41:56.125 -----------------------------------------------
 eclipse.buildId=I20120608-1400
 java.version=1.6.0_35
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
-Framework arguments:  -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product
-Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -product org.eclipse.epp.package.jee.product -data C:\Documents and Settings\Ophe\My Documents\Dropbox\TDDC17\Lab5\lab5_workspace -product org.eclipse.epp.package.jee.product
-
-!ENTRY org.eclipse.jdt.ui 4 10001 2012-10-09 12:26:11.593
-!MESSAGE Internal Error
-!STACK 1
-Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for PrintStream [in PrintStream.class [in java.io [in C:\Program Files\Java\jre6\lib\rt.jar]]] ]
-	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
-	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
-	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:639)
-	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:463)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
-	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
-	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2012-10-09 12:26:11.593
-!MESSAGE Timed out while retrieving the attached javadoc for PrintStream [in PrintStream.class [in java.io [in C:\Program Files\Java\jre6\lib\rt.jar]]] 
-
-!ENTRY org.eclipse.jdt.ui 4 10001 2012-10-09 12:26:11.953
-!MESSAGE Internal Error
-!STACK 1
-Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for System [in System.class [in java.lang [in C:\Program Files\Java\jre6\lib\rt.jar]]] ]
-	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
-	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
-	at org.eclipse.jdt.internal.core.BinaryField.getAttachedJavadoc(BinaryField.java:121)
-	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:463)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
-	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
-	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2012-10-09 12:26:11.953
-!MESSAGE Timed out while retrieving the attached javadoc for System [in System.class [in java.lang [in C:\Program Files\Java\jre6\lib\rt.jar]]] 
-
-!ENTRY org.eclipse.jdt.ui 4 10001 2012-10-09 12:26:25.734
-!MESSAGE Internal Error
-!STACK 1
-Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for PrintStream [in PrintStream.class [in java.io [in C:\Program Files\Java\jre6\lib\rt.jar]]] ]
-	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
-	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
-	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:639)
-	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:463)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
-	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
-	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2012-10-09 12:26:25.734
-!MESSAGE Timed out while retrieving the attached javadoc for PrintStream [in PrintStream.class [in java.io [in C:\Program Files\Java\jre6\lib\rt.jar]]] 
-
-!ENTRY org.eclipse.jdt.ui 4 10001 2012-10-09 12:26:32.062
-!MESSAGE Internal Error
-!STACK 1
-Java Model Exception: Java Model Status [Timed out while retrieving the attached javadoc for PrintStream [in PrintStream.class [in java.io [in C:\Program Files\Java\jre6\lib\rt.jar]]] ]
-	at org.eclipse.jdt.internal.core.JavaElement.getURLContents(JavaElement.java:808)
-	at org.eclipse.jdt.internal.core.BinaryType.getJavadocContents(BinaryType.java:1037)
-	at org.eclipse.jdt.internal.core.BinaryMethod.getAttachedJavadoc(BinaryMethod.java:639)
-	at org.eclipse.jdt.internal.ui.text.javadoc.JavadocContentAccess2.getHTMLContent(JavadocContentAccess2.java:463)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.extractJavadoc(ProposalInfo.java:95)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.computeInfo(ProposalInfo.java:75)
-	at org.eclipse.jdt.internal.ui.text.java.ProposalInfo.getInfo(ProposalInfo.java:58)
-	at org.eclipse.jdt.internal.ui.text.java.AbstractJavaCompletionProposal.getAdditionalProposalInfo(AbstractJavaCompletionProposal.java:555)
-	at org.eclipse.jface.text.contentassist.AdditionalInfoController$3.run(AdditionalInfoController.java:106)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
-!SUBENTRY 1 org.eclipse.jdt.core 4 1012 2012-10-09 12:26:32.062
-!MESSAGE Timed out while retrieving the attached javadoc for PrintStream [in PrintStream.class [in java.io [in C:\Program Files\Java\jre6\lib\rt.jar]]] 
-!SESSION 2012-10-18 18:04:11.865 -----------------------------------------------
-eclipse.buildId=I20120608-1400
-java.version=1.7.0_07
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=sv_SE
 Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.e4.ui.workbench 4 0 2012-10-18 18:15:45.347
+!ENTRY org.eclipse.e4.ui.workbench 4 0 2012-10-19 09:44:33.578
 !MESSAGE Error setting focus to : org.eclipse.e4.ui.model.application.ui.basic.impl.PartImpl QLearningController.java
 !STACK 0
 org.eclipse.swt.SWTException: Widget is disposed

@@ -38,26 +38,32 @@ public class StateAndReward {
 
 	/* State discretization function for the full hover controller */
 	public static String getStateHover(double angle, double vx, double vy) {
-		String temp="";
+		StringBuilder sb = new StringBuilder();
 		
-		temp +="vx"+discretize(vx, 3,-10,10);
-		temp +="vy"+discretize(vy, 11,-10,10);
-		temp +="vxvy"+discretize(Math.pow(vx+vy,2), 2,0,2);
-		temp +="angle"+discretize(angle, 5,-4,4);
-		temp +="angle2"+discretize2(angle, 3,-0.06,0.06);
-
-		return temp;
+		sb.append("vx");
+		sb.append(discretize(vx, 3,-10,10));
+		sb.append("vx2");
+		sb.append(discretize2(vx, 5,-1,1));
+		sb.append("vy");
+		sb.append(discretize(vy, 3,-10,10));
+		sb.append("vy2");
+		sb.append(discretize2(vy, 5,-1,1));
+	//	sb.append("vxvy");
+	//	sb.append(discretize(Math.pow(vx+vy,2), 2,0,4));
+		sb.append("angle");
+		sb.append(discretize(angle, 2,-4,4));
+		sb.append("angle2");
+		sb.append(discretize2(angle, 3,-0.06,0.06));
+		return sb.toString();
 	}
 
 	/* Reward function for the full hover controller */
 	public static double getRewardHover(double angle, double vx, double vy) {
-		double rewAngle=5*(Math.PI-Math.abs(angle));
+		double rewAngle=15*(Math.PI-Math.abs(angle));
 		double rewVX=Math.abs(30-vx);
-		double rewVY=Math.abs(30-vy);
-		//return Math.pow(rewAngle,2)+Math.pow(rewVX,2)+Math.pow(rewVY,2);
-		return Math.pow(rewAngle+rewVX+rewVY,2);
-		
-	
+		double rewVY=10*Math.abs(30-vy);
+		return Math.pow(rewAngle,2)+Math.pow(rewVX,2)+Math.pow(rewVY,2);
+		//return Math.pow(rewAngle+rewVX+rewVY,2);
 	}
 
 	// ///////////////////////////////////////////////////////////
