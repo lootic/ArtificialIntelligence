@@ -62,7 +62,7 @@
           <tags>persp.actionSet:org.eclipse.debug.ui.breakpointActionSet</tags>
           <tags>persp.actionSet:org.eclipse.wst.ws.explorer.explorer</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_J7WXeBH4EeKgC-0IHVRFpA" selectedElement="_J7fhYxH4EeKgC-0IHVRFpA" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="_J7fhYxH4EeKgC-0IHVRFpA" elementId="bottomRight" containerData="519" selectedElement="_J7fhaxH4EeKgC-0IHVRFpA">
+            <children xsi:type="basic:PartStack" xmi:id="_J7fhYxH4EeKgC-0IHVRFpA" elementId="bottomRight" containerData="484" selectedElement="_J7fhaxH4EeKgC-0IHVRFpA">
               <tags>newtablook</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_J7fhZBH4EeKgC-0IHVRFpA" elementId="org.eclipse.ui.views.AllMarkersView" ref="_J6c_kRH4EeKgC-0IHVRFpA"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_J7fhZRH4EeKgC-0IHVRFpA" elementId="org.eclipse.ui.views.PropertySheet" ref="_J6mwkBH4EeKgC-0IHVRFpA"/>
@@ -80,7 +80,7 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_J7fhbRH4EeKgC-0IHVRFpA" elementId="org.eclipse.ui.views.ProgressView" toBeRendered="false" ref="_J6v6hBH4EeKgC-0IHVRFpA"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_J7pSYBH4EeKgC-0IHVRFpA" elementId="org.eclipse.search.ui.views.SearchView" toBeRendered="false" ref="_J6v6hRH4EeKgC-0IHVRFpA"/>
             </children>
-            <children xsi:type="advanced:Placeholder" xmi:id="_J7WXeRH4EeKgC-0IHVRFpA" elementId="org.eclipse.ui.editorss" containerData="1036" ref="_JS9hwBH4EeKgC-0IHVRFpA">
+            <children xsi:type="advanced:Placeholder" xmi:id="_J7WXeRH4EeKgC-0IHVRFpA" elementId="org.eclipse.ui.editorss" containerData="1071" ref="_JS9hwBH4EeKgC-0IHVRFpA">
               <tags>Maximized</tags>
             </children>
             <children xsi:type="basic:PartStack" xmi:id="_J7fhYBH4EeKgC-0IHVRFpA" elementId="topRight" visible="false" containerData="2022" selectedElement="_J7fhYRH4EeKgC-0IHVRFpA">
@@ -114,7 +114,7 @@
     <sharedElements xsi:type="advanced:Area" xmi:id="_JS9hwBH4EeKgC-0IHVRFpA" elementId="org.eclipse.ui.editorss" selectedElement="_LAPbYRkpEeKwEszJjgomvw">
       <children xsi:type="basic:PartStack" xmi:id="_LAPbYRkpEeKwEszJjgomvw" elementId="PartStack@132e17a" selectedElement="_usG0ABj_EeKQVu3K_9cBSQ">
         <children xsi:type="basic:Part" xmi:id="_usG0ABj_EeKQVu3K_9cBSQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="StateAndReward.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="QLearning/src/StateAndReward.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/QLearning/src/StateAndReward.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2571&quot; selectionTopPixel=&quot;1132&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/QLearning/src/StateAndReward.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;2&quot; selectionOffset=&quot;1806&quot; selectionTopPixel=&quot;352&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>
@@ -124,7 +124,7 @@
           <tags>removeOnHide</tags>
         </children>
         <children xsi:type="basic:Part" xmi:id="_z2cDsBknEeKwEszJjgomvw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="QLearningController.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="QLearning/src/QLearningController.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/QLearning/src/QLearningController.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;7967&quot; selectionTopPixel=&quot;2467&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/QLearning/src/QLearningController.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;5066&quot; selectionTopPixel=&quot;2017&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>removeOnHide</tags>
         </children>

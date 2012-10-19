@@ -54,8 +54,8 @@ public class StateAndReward {
 		double rewAngle=5*(Math.PI-Math.abs(angle));
 		double rewVX=Math.abs(30-vx);
 		double rewVY=Math.abs(30-vy);
-		//return Math.pow(rewAngle,2)+Math.pow(rewVX,2)+Math.pow(rewVY,2);
-		return Math.pow(rewAngle+rewVX+rewVY,2);
+		return Math.pow(rewAngle,2)+Math.pow(rewVX,2)+Math.pow(rewVY,2);
+		//return Math.pow(rewAngle+rewVX+rewVY,2);
 		
 	
 	}
